@@ -1,0 +1,18 @@
+node_modules
+dist
+test
+src/**/*.js
+
+coverage
+.nyc_output
+*.log
+
+yarn.lock
+
+.idea
+.~lock*
+
+# private files
+.keys
+
+qualify-run

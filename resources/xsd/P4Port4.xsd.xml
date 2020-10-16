@@ -1,0 +1,92 @@
+<P4CollectedDataBatchResultResponseEnvelope xmlns:urn="nedu:edsn:data:p4collecteddatabatchresultresponse:2:standard">
+  <EDSNBusinessDocumentHeader>
+    <!--Optional:-->
+    <ContentHash>string</ContentHash>
+    <!--Optional:-->
+    <ConversationID>string</ConversationID>
+    <!--Optional:-->
+    <CorrelationID>string</CorrelationID>
+    <CreationTimestamp>2008-09-29T03:49:45</CreationTimestamp>
+    <!--Optional:-->
+    <DocumentID>string</DocumentID>
+    <!--Optional:-->
+    <ExpiresAt>2014-09-19T01:18:33</ExpiresAt>
+    <MessageID>string</MessageID>
+    <!--Optional:-->
+    <ProcessTypeID>string</ProcessTypeID>
+    <!--Optional:-->
+    <RepeatedRequest>string</RepeatedRequest>
+    <!--Optional:-->
+    <TestRequest>string</TestRequest>
+    <Destination>
+      <Receiver>
+        <!--Optional:-->
+        <Authority>string</Authority>
+        <!--Optional:-->
+        <ContactTypeIdentifier>string</ContactTypeIdentifier>
+        <ReceiverID>string</ReceiverID>
+      </Receiver>
+      <!--Optional:-->
+      <Service>
+        <!--Optional:-->
+        <ServiceMethod>string</ServiceMethod>
+        <!--Optional:-->
+        <ServiceName>string</ServiceName>
+      </Service>
+    </Destination>
+    <!--Optional:-->
+    <Manifest>
+      <NumberofItems>1000.00</NumberofItems>
+      <!--1 or more repetitions:-->
+      <ManifestItem>
+        <!--Optional:-->
+        <Description>string</Description>
+        <!--Optional:-->
+        <LanguageCode>string</LanguageCode>
+        <MimeTypeQualifierCode>string</MimeTypeQualifierCode>
+        <UniformResourceIdentifier>string</UniformResourceIdentifier>
+      </ManifestItem>
+    </Manifest>
+    <Source>
+      <!--Optional:-->
+      <Authority>string</Authority>
+      <!--Optional:-->
+      <ContactTypeIdentifier>string</ContactTypeIdentifier>
+      <SenderID>string</SenderID>
+    </Source>
+  </EDSNBusinessDocumentHeader>
+  <P4Content>
+    <!--Zero or more repetitions:-->
+    <P4MeteringPoint>
+      <EANID>stringstringstring</EANID>
+      <ExternalReference>string</ExternalReference>
+      <!--Optional:-->
+      <QueryDate>2006-08-19+02:00</QueryDate>
+      <QueryReason>INT</QueryReason>
+      <!--You have a CHOICE of the next 2 items at this level-->
+      <!--1 or more repetitions:-->
+      <P4EnergyMeter>
+        <ID>string</ID>
+        <!--1 to 4 repetitions:-->
+        <P4Register>
+          <ID>strin</ID>
+          <MeasureUnit>DM3</MeasureUnit>
+          <!--1 to 101 repetitions:-->
+          <P4Reading>
+            <!--Optional:-->
+            <Reading>1000.00</Reading>
+            <ReadingDateTime>2017-05-15T08:41:13</ReadingDateTime>
+          </P4Reading>
+        </P4Register>
+      </P4EnergyMeter>
+      <!--1 or more repetitions:-->
+      <P4Rejection>
+        <Rejection>
+          <RejectionCode>str</RejectionCode>
+          <!--Optional:-->
+          <RejectionText>string</RejectionText>
+        </Rejection>
+      </P4Rejection>
+    </P4MeteringPoint>
+  </P4Content>
+</P4CollectedDataBatchResultResponseEnvelope>

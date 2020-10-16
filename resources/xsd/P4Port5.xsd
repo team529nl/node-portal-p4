@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.11-b150616.1732 svn-revision#a247ba216861f2c0baac9a3657c5690bce0c744d. --><xsd:schema xmlns:ccma="urn:edsn:edsn:data:soapfault:1:standard" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1p0" targetNamespace="urn:edsn:edsn:data:soapfault:1:standard" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <!-- ================================================================== -->
+  <!-- ===== Element Declarations ===== -->
+  <!-- ================================================================== -->
+  <!-- ===== Root element ===== -->
+  <!-- ================================================================== -->
+  <xsd:element name="SOAPFault" type="ccma:SOAPFault">
+</xsd:element>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definitions ===== -->
+  <!-- ================================================================== -->
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: SOAPFault ===== -->
+  <!-- ================================================================== -->
+  <xsd:complexType name="SOAPFault">
+    <xsd:sequence>
+      <xsd:element name="ErrorCode" type="ccma:SOAPFault_Numeric"/>
+      <xsd:element name="ErrorText" type="ccma:SOAPFault_Text"/>
+      <xsd:element name="ErrorDetails" minOccurs="0" maxOccurs="1" type="ccma:SOAPFault_Text"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- ================================================================== -->
+  <!-- ===== Business Data Type Definitions ===== -->
+  <!-- ================================================================== -->
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: Numeric ===== -->
+  <!-- ================================================================== -->
+  <xsd:simpleType name="SOAPFault_Numeric">
+    <xsd:annotation>
+      <xsd:documentation>Nummer (getal) (LDT categorie-3).</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:decimal">
+</xsd:restriction>
+  </xsd:simpleType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: Text ===== -->
+  <!-- ================================================================== -->
+  <xsd:simpleType name="SOAPFault_Text">
+    <xsd:annotation>
+      <xsd:documentation>Tekst (string) (LDT categorie-3).</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+</xsd:restriction>
+  </xsd:simpleType>
+  <!-- ================================================================== -->
+  <!-- ===== Business Code List Definitions ===== -->
+  <!-- ================================================================== -->
+</xsd:schema>

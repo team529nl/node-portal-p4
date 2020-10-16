@@ -1,0 +1,7 @@
+{
+  "SOAPFault": {
+    "ErrorCode": "1000.00",
+    "ErrorText": "string",
+    "ErrorDetails": "string"
+  }
+}

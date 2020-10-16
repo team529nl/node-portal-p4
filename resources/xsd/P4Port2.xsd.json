@@ -1,0 +1,49 @@
+{
+  "P4CollectedDataBatchResponseEnvelope": {
+    "EDSNBusinessDocumentHeader": {
+      "ContentHash": "string",
+      "ConversationID": "string",
+      "CorrelationID": "string",
+      "CreationTimestamp": "2008-09-29T03:49:45",
+      "DocumentID": "string",
+      "ExpiresAt": "2014-09-19T01:18:33",
+      "MessageID": "string",
+      "ProcessTypeID": "string",
+      "RepeatedRequest": "string",
+      "TestRequest": "string",
+      "Destination": {
+        "Receiver": {
+          "Authority": "string",
+          "ContactTypeIdentifier": "string",
+          "ReceiverID": "string"
+        },
+        "Service": {
+          "ServiceMethod": "string",
+          "ServiceName": "string"
+        }
+      },
+      "Manifest": {
+        "NumberofItems": "1000.00",
+        "ManifestItem": {
+          "Description": "string",
+          "LanguageCode": "string",
+          "MimeTypeQualifierCode": "string",
+          "UniformResourceIdentifier": "string"
+        }
+      },
+      "Source": {
+        "Authority": "string",
+        "ContactTypeIdentifier": "string",
+        "SenderID": "string"
+      }
+    },
+    "P4Content": {
+      "P4Rejection": {
+        "Rejection": {
+          "RejectionCode": "str",
+          "RejectionText": "string"
+        }
+      }
+    }
+  }
+}

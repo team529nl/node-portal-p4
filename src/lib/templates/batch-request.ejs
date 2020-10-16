@@ -1,0 +1,26 @@
+<ns2:P4CollectedDataBatchRequestEnvelope xmlns:ns5="urn:nedu:edsn:data:p4collecteddatabatchresultresponse:2:standard"
+                                         xmlns:ns4="urn:nedu:edsn:data:p4collecteddatabatchresultrequest:2:standard"
+                                         xmlns:ns3="urn:nedu:edsn:data:p4collecteddatabatchresponse:2:standard"
+                                         xmlns:ns2="urn:nedu:edsn:data:p4collecteddatabatchrequest:2:standard"
+                                         xmlns="urn:edsn:edsn:data:soapfault:1:standard">
+    <ns2:EDSNBusinessDocumentHeader>
+        <ns2:CreationTimestamp><%-created%></ns2:CreationTimestamp>
+        <ns2:MessageID><%=messageId%></ns2:MessageID>
+        <ns2:Destination>
+            <ns2:Receiver>
+                <ns2:ReceiverID><%=receiverEAN%></ns2:ReceiverID>
+            </ns2:Receiver>
+        </ns2:Destination>
+        <ns2:Source>
+            <ns2:SenderID><%=senderEAN%></ns2:SenderID>
+        </ns2:Source>
+    </ns2:EDSNBusinessDocumentHeader>
+    <ns2:P4Content><% for (var mp of meteringPointEANs) {%>
+        <ns2:P4MeteringPoint>
+            <ns2:EANID><%=mp.ean%></ns2:EANID>
+            <ns2:ExternalReference><%=mp.reference%></ns2:ExternalReference>
+            <% if (!!mp.date) { %><ns2:QueryDate><%=fns.formatDate(mp.date)%></ns2:QueryDate> <% } %>
+            <ns2:QueryReason><%=mp.queryType%></ns2:QueryReason>
+        </ns2:P4MeteringPoint>
+    <% } %></ns2:P4Content>
+</ns2:P4CollectedDataBatchRequestEnvelope>

@@ -1,0 +1,668 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.11-b150616.1732 svn-revision#a247ba216861f2c0baac9a3657c5690bce0c744d. --><xsd:schema xmlns:ccma="urn:nedu:edsn:data:p4collecteddatabatchresponse:2:standard" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:ccts="urn:un:unece:uncefact:documentation:common:3:standard:CoreComponentsTechnicalSpecification:3" version="2p0" targetNamespace="urn:nedu:edsn:data:p4collecteddatabatchresponse:2:standard" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <!-- ================================================================== -->
+  <!-- ===== Element Declarations ===== -->
+  <!-- ================================================================== -->
+  <!-- ===== Root element ===== -->
+  <!-- ================================================================== -->
+  <xsd:element name="P4CollectedDataBatchResponseEnvelope" type="ccma:P4CollectedDataBatchResponseEnvelope">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#P4CollectedDataBatchResponseEnvelope</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>P4CollectedDataBatchResponseEnvelope</ccts:DictionaryEntryName>
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definitions ===== -->
+  <!-- ================================================================== -->
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: P4CollectedDataBatchResponseEnvelope ===== -->
+  <!-- ================================================================== -->
+  <xsd:complexType name="P4CollectedDataBatchResponseEnvelope">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#P4CollectedDataBatchResponseEnvelope</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>P4CollectedDataBatchResponseEnvelope</ccts:DictionaryEntryName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="EDSNBusinessDocumentHeader" type="ccma:P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#EDSNBusinessDocumentHeader</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="P4Content" type="ccma:P4CollectedDataBatchResponseEnvelope_P4Content" sawsdl:modelReference="urn:nedu:edsn:lom:p4:model:2:standard#P4Content">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#P4Content</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>P4Content</ccts:DictionaryEntryName>
+            <ccts:Definition>Placeholder for message generation</ccts:Definition>
+            <ccts:BusinessTermName>ContentEnvelop</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader ===== -->
+  <!-- ================================================================== -->
+  <xsd:complexType name="P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#EDSNBusinessDocumentHeader</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ContentHash" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#EDSNBusinessDocumentHeader.ContentHash</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ContentHash</ccts:DictionaryEntryName>
+            <ccts:Definition>Hash calculation based on business document</ccts:Definition>
+            <ccts:BusinessTermName>Hash-code berekening</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ConversationID" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Identifier">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#EDSNBusinessDocumentHeader.ConversationID</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ConversationID</ccts:DictionaryEntryName>
+            <ccts:Definition>This identifier is used to identify all document instances related to a specific business process resulting from an initial service request</ccts:Definition>
+            <ccts:BusinessTermName>Conversatie ID</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CorrelationID" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Identifier">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#EDSNBusinessDocumentHeader.CorrelationID</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CorrelationID</ccts:DictionaryEntryName>
+            <ccts:Definition>This identifier is used to identify the document instances related to a specific asynchronous process</ccts:Definition>
+            <ccts:BusinessTermName>Correlatie ID</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CreationTimestamp" type="ccma:P4CollectedDataBatchResponseEnvelope_DateTime">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#EDSNBusinessDocumentHeader.CreationTimestamp</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CreationTimestamp</ccts:DictionaryEntryName>
+            <ccts:Definition>Timestamp when document was created</ccts:Definition>
+            <ccts:BusinessTermName>Creatie datum/tijd</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DocumentID" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#EDSNBusinessDocumentHeader.DocumentID</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.DocumentID</ccts:DictionaryEntryName>
+            <ccts:Definition>This identifier is used to uniquely identify the business document on a functional level</ccts:Definition>
+            <ccts:BusinessTermName>Document ID</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ExpiresAt" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_DateTime">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#EDSNBusinessDocumentHeader.ExpiresAt</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ExpiresAt</ccts:DictionaryEntryName>
+            <ccts:Definition>Timestamp indication the expiration of this request</ccts:Definition>
+            <ccts:BusinessTermName>Uiterste geldigheidsdatum</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MessageID" type="ccma:P4CollectedDataBatchResponseEnvelope_Identifier">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#EDSNBusinessDocumentHeader.MessageID</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.MessageID</ccts:DictionaryEntryName>
+            <ccts:Definition>UUID voor het uniek identificeren van elke business document instantie. De UUID wordt uitgegeven door de infrastructuur.
+Deze identifier is verplicht.</ccts:Definition>
+            <ccts:BusinessTermName>Bericht ID</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ProcessTypeID" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#EDSNBusinessDocumentHeader.ProcessTypeID</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ProcessTypeID</ccts:DictionaryEntryName>
+            <ccts:Definition>This identifier is used to identify the process type where a document instance belongs to</ccts:Definition>
+            <ccts:BusinessTermName>Procestype ID</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="RepeatedRequest" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Identifier">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#EDSNBusinessDocumentHeader.RepeatedRequest</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.RepeatedRequest</ccts:DictionaryEntryName>
+            <ccts:Definition>Correlates message or service with all other messages and service calls related to the same business process</ccts:Definition>
+            <ccts:BusinessTermName>Herhaling aanvraag</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TestRequest" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Indicator">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#EDSNBusinessDocumentHeader.TestRequest</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.TestRequest</ccts:DictionaryEntryName>
+            <ccts:Definition>Indicates if this is a test request</ccts:Definition>
+            <ccts:BusinessTermName>Testdocument</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Destination" type="ccma:P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Destination">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Destination</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+            <ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Manifest" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Manifest">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Manifest</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+            <ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Source" type="ccma:P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Source">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Source</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+            <ccts:Definition>Zender van een bericht.</ccts:Definition>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Destination ===== -->
+  <!-- ================================================================== -->
+  <xsd:complexType name="P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Destination">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Destination</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+        <ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Receiver" type="ccma:P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Receiver</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+            <ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Service" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Service</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+            <ccts:Definition>Service to be consumed</ccts:Definition>
+            <ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver ===== -->
+  <!-- ================================================================== -->
+  <xsd:complexType name="P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Receiver</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+        <ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Receiver.Authority</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Receiver.Authority</ccts:DictionaryEntryName>
+            <ccts:Definition>Descriptor that qualifies the identifier used to identify the receiving party</ccts:Definition>
+            <ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Receiver.ContactTypeIdentifier</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Receiver.ContactTypeIdentifier</ccts:DictionaryEntryName>
+            <ccts:Definition>Role in this business process</ccts:Definition>
+            <ccts:BusinessTermName>Rol ontvangende marktpartij</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ReceiverID" type="ccma:P4CollectedDataBatchResponseEnvelope_Identifier">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Receiver.ReceiverID</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Receiver.ReceiverID</ccts:DictionaryEntryName>
+            <ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+            <ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Service ===== -->
+  <!-- ================================================================== -->
+  <xsd:complexType name="P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Service</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+        <ccts:Definition>Service to be consumed</ccts:Definition>
+        <ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ServiceMethod" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Service.ServiceMethod</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Service.ServiceMethod</ccts:DictionaryEntryName>
+            <ccts:Definition>Identifies a process within the service that processes on the business document</ccts:Definition>
+            <ccts:BusinessTermName>Functionaliteit van de service</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ServiceName" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Service.ServiceName</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Service.ServiceName</ccts:DictionaryEntryName>
+            <ccts:Definition>Sender description of service to be carried out on the business document</ccts:Definition>
+            <ccts:BusinessTermName>Naam van de service</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Manifest ===== -->
+  <!-- ================================================================== -->
+  <xsd:complexType name="P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Manifest">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Manifest</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+        <ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="NumberofItems" type="ccma:P4CollectedDataBatchResponseEnvelope_Numeric">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Manifest.NumberofItems</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Manifest.NumberofItems</ccts:DictionaryEntryName>
+            <ccts:Definition>Number of associated items</ccts:Definition>
+            <ccts:BusinessTermName>Aantal gerelateerde items</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ManifestItem" minOccurs="1" maxOccurs="unbounded" type="ccma:P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#ManifestItem</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+            <ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem ===== -->
+  <!-- ================================================================== -->
+  <xsd:complexType name="P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#ManifestItem</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+        <ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Description" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#ManifestItem.Description</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>ManifestItem.Description</ccts:DictionaryEntryName>
+            <ccts:Definition>Text description of the item</ccts:Definition>
+            <ccts:BusinessTermName>Omschrijving</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="LanguageCode" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#ManifestItem.LanguageCode</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>ManifestItem.LanguageCode</ccts:DictionaryEntryName>
+            <ccts:Definition>ISO 639 language code of the item</ccts:Definition>
+            <ccts:BusinessTermName>Taal-code</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MimeTypeQualifierCode" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#ManifestItem.MimeTypeQualifierCode</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>ManifestItem.MimeTypeQualifierCode</ccts:DictionaryEntryName>
+            <ccts:Definition>MIME Media Types Code describing the content of the item</ccts:Definition>
+            <ccts:BusinessTermName>MIME Media Type code</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="UniformResourceIdentifier" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#ManifestItem.UniformResourceIdentifier</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>ManifestItem.UniformResourceIdentifier</ccts:DictionaryEntryName>
+            <ccts:Definition>URI of the item
+Identifier voor locatie en naam van een attachment</ccts:Definition>
+            <ccts:BusinessTermName>URI</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Source ===== -->
+  <!-- ================================================================== -->
+  <xsd:complexType name="P4CollectedDataBatchResponseEnvelope_EDSNBusinessDocumentHeader_Source">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Source</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+        <ccts:Definition>Zender van een bericht.</ccts:Definition>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Source.Authority</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Source.Authority</ccts:DictionaryEntryName>
+            <ccts:Definition>Descriptor that qualifies the identifier used to identify the sending party</ccts:Definition>
+            <ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Text">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Source.ContactTypeIdentifier</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Source.ContactTypeIdentifier</ccts:DictionaryEntryName>
+            <ccts:Definition>Role in this business process</ccts:Definition>
+            <ccts:BusinessTermName>Rol zendende marktpartij</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SenderID" type="ccma:P4CollectedDataBatchResponseEnvelope_Identifier">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Source.SenderID</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>Source.SenderID</ccts:DictionaryEntryName>
+            <ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+            <ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: P4CollectedDataBatchResponseEnvelope_P4Content ===== -->
+  <!-- ================================================================== -->
+  <xsd:complexType name="P4CollectedDataBatchResponseEnvelope_P4Content" sawsdl:modelReference="urn:nedu:edsn:lom:p4:model:2:standard#P4Content">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#P4Content</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>P4Content</ccts:DictionaryEntryName>
+        <ccts:Definition>Placeholder for message generation</ccts:Definition>
+        <ccts:BusinessTermName>ContentEnvelop</ccts:BusinessTermName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="P4Rejection" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_P4Content_P4Rejection" sawsdl:modelReference="urn:nedu:edsn:lom:p4:model:2:standard#P4Rejection">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#P4Rejection</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>P4Rejection</ccts:DictionaryEntryName>
+            <ccts:Definition>Een afwijzing op een vraag of verzoek. P4Rejection (Afwijzing) heeft een relatie met P4MeteringPoint (Aansluiting).</ccts:Definition>
+            <ccts:BusinessTermName>Afwijzing</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: P4CollectedDataBatchResponseEnvelope_P4Content_P4Rejection ===== -->
+  <!-- ================================================================== -->
+  <xsd:complexType name="P4CollectedDataBatchResponseEnvelope_P4Content_P4Rejection" sawsdl:modelReference="urn:nedu:edsn:lom:p4:model:2:standard#P4Rejection">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#P4Rejection</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>P4Rejection</ccts:DictionaryEntryName>
+        <ccts:Definition>Een afwijzing op een vraag of verzoek. P4Rejection (Afwijzing) heeft een relatie met P4MeteringPoint (Aansluiting).</ccts:Definition>
+        <ccts:BusinessTermName>Afwijzing</ccts:BusinessTermName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Rejection" type="ccma:P4CollectedDataBatchResponseEnvelope_RejectionP4Type" sawsdl:modelReference="urn:nedu:edsn:lom:p4:model:2:standard#P4Rejection.Rejection">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#P4Rejection.Rejection</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>P4Rejection.Rejection</ccts:DictionaryEntryName>
+            <ccts:Definition>Code van de reden van de afwijzing (verplicht) en toelichting op de reden van afwijzing (optioneel) (CDT). Zie BRS P4 voor overzicht van afwijsredenen/foutcodes</ccts:Definition>
+            <ccts:BusinessTermName>Afwijzing</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- ================================================================== -->
+  <!-- ===== Business Data Type Definitions ===== -->
+  <!-- ================================================================== -->
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: DateTime ===== -->
+  <!-- ================================================================== -->
+  <xsd:simpleType name="P4CollectedDataBatchResponseEnvelope_DateTime">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#DateTime</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>DateTime</ccts:DictionaryEntryName>
+        <ccts:Definition>Datum/tijd (dateTime) (LDT categorie-1).</ccts:Definition>
+        <ccts:BusinessTermName>Datum/tijd</ccts:BusinessTermName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:dateTime"/>
+  </xsd:simpleType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: Identifier ===== -->
+  <!-- ================================================================== -->
+  <xsd:simpleType name="P4CollectedDataBatchResponseEnvelope_Identifier">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Identifier</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>Identifier</ccts:DictionaryEntryName>
+        <ccts:Definition>Identifier (string) (LDT categorie-3).</ccts:Definition>
+        <ccts:BusinessTermName>Identifier</ccts:BusinessTermName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+</xsd:restriction>
+  </xsd:simpleType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: Indicator ===== -->
+  <!-- ================================================================== -->
+  <xsd:simpleType name="P4CollectedDataBatchResponseEnvelope_Indicator">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Indicator</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>Indicator</ccts:DictionaryEntryName>
+        <ccts:Definition>Indicator (string) (LDT categorie-3).</ccts:Definition>
+        <ccts:BusinessTermName>Indicator</ccts:BusinessTermName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+</xsd:restriction>
+  </xsd:simpleType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: Numeric ===== -->
+  <!-- ================================================================== -->
+  <xsd:simpleType name="P4CollectedDataBatchResponseEnvelope_Numeric">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Numeric</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>Numeric</ccts:DictionaryEntryName>
+        <ccts:Definition>Nummer (getal) (LDT categorie-3).</ccts:Definition>
+        <ccts:BusinessTermName>Nummer</ccts:BusinessTermName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:decimal">
+</xsd:restriction>
+  </xsd:simpleType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: RejectionP4Type ===== -->
+  <!-- ================================================================== -->
+  <xsd:complexType name="P4CollectedDataBatchResponseEnvelope_RejectionP4Type" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#RejectionP4Type">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#RejectionP4Type</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>RejectionP4Type</ccts:DictionaryEntryName>
+        <ccts:Definition>Datatype voor inhoudelijke afwijzingen</ccts:Definition>
+        <ccts:BusinessTermName>Afwijzingen PP4</ccts:BusinessTermName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="RejectionCode" type="ccma:P4CollectedDataBatchResponseEnvelope_RejectionReasonType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#RejectionP4Type.RejectionCode">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#RejectionP4Type.RejectionCode</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>RejectionP4Type.RejectionCode</ccts:DictionaryEntryName>
+            <ccts:Definition>Code van de reden van de afwijzing</ccts:Definition>
+            <ccts:BusinessTermName>Code afwijsreden</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="RejectionText" minOccurs="0" maxOccurs="1" type="ccma:P4CollectedDataBatchResponseEnvelope_Text" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#RejectionP4Type.RejectionText">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#RejectionP4Type.RejectionText</ccts:UniqueID>
+            <ccts:VersionID>2.0</ccts:VersionID>
+            <ccts:DictionaryEntryName>RejectionP4Type.RejectionText</ccts:DictionaryEntryName>
+            <ccts:Definition>Toelichting op de reden van afwijzing</ccts:Definition>
+            <ccts:BusinessTermName>Toelichting afwijsreden</ccts:BusinessTermName>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: RejectionReasonType ===== -->
+  <!-- ================================================================== -->
+  <xsd:simpleType name="P4CollectedDataBatchResponseEnvelope_RejectionReasonType">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#RejectionReasonType</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>RejectionReasonType</ccts:DictionaryEntryName>
+        <ccts:Definition>Code afwijsreden.</ccts:Definition>
+        <ccts:BusinessTermName>Code afwijsreden</ccts:BusinessTermName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="3"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- ================================================================== -->
+  <!-- ===== Type Definition: Text ===== -->
+  <!-- ================================================================== -->
+  <xsd:simpleType name="P4CollectedDataBatchResponseEnvelope_Text">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:UniqueID>urn:nedu:edsn:data:p4collecteddatabatchresponse#Text</ccts:UniqueID>
+        <ccts:VersionID>2.0</ccts:VersionID>
+        <ccts:DictionaryEntryName>Text</ccts:DictionaryEntryName>
+        <ccts:Definition>Tekst (string) (LDT categorie-3).</ccts:Definition>
+        <ccts:BusinessTermName>Tekst</ccts:BusinessTermName>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+</xsd:restriction>
+  </xsd:simpleType>
+  <!-- ================================================================== -->
+  <!-- ===== Business Code List Definitions ===== -->
+  <!-- ================================================================== -->
+</xsd:schema>

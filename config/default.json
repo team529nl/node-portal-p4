@@ -1,0 +1,13 @@
+{
+  "Client": {
+    "p4PortalWsdl": "https://pp4-test.edsn.nl:443/P4BatchVerzoekMeterstand/P4Port?wsdl",
+    "sender": "[EAN13]",
+    "privateKey": "path/to/private.key",
+    "publicCert": "path/to/public.cert"
+  },
+  "Proxy" :{
+    "host": "proxy.example.com",
+    "key": "path/to/shadowsocks.key",
+    "username": "forward"
+  }
+}

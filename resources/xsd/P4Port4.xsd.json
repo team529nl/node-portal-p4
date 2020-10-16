@@ -1,0 +1,66 @@
+{
+  "P4CollectedDataBatchResultResponseEnvelope": {
+    "EDSNBusinessDocumentHeader": {
+      "ContentHash": "string",
+      "ConversationID": "string",
+      "CorrelationID": "string",
+      "CreationTimestamp": "2008-09-29T03:49:45",
+      "DocumentID": "string",
+      "ExpiresAt": "2014-09-19T01:18:33",
+      "MessageID": "string",
+      "ProcessTypeID": "string",
+      "RepeatedRequest": "string",
+      "TestRequest": "string",
+      "Destination": {
+        "Receiver": {
+          "Authority": "string",
+          "ContactTypeIdentifier": "string",
+          "ReceiverID": "string"
+        },
+        "Service": {
+          "ServiceMethod": "string",
+          "ServiceName": "string"
+        }
+      },
+      "Manifest": {
+        "NumberofItems": "1000.00",
+        "ManifestItem": {
+          "Description": "string",
+          "LanguageCode": "string",
+          "MimeTypeQualifierCode": "string",
+          "UniformResourceIdentifier": "string"
+        }
+      },
+      "Source": {
+        "Authority": "string",
+        "ContactTypeIdentifier": "string",
+        "SenderID": "string"
+      }
+    },
+    "P4Content": {
+      "P4MeteringPoint": {
+        "EANID": "stringstringstring",
+        "ExternalReference": "string",
+        "QueryDate": "2006-08-19+02:00",
+        "QueryReason": "INT",
+        "P4EnergyMeter": {
+          "ID": "string",
+          "P4Register": {
+            "ID": "strin",
+            "MeasureUnit": "DM3",
+            "P4Reading": {
+              "Reading": "1000.00",
+              "ReadingDateTime": "2017-05-15T08:41:13"
+            }
+          }
+        },
+        "P4Rejection": {
+          "Rejection": {
+            "RejectionCode": "str",
+            "RejectionText": "string"
+          }
+        }
+      }
+    }
+  }
+}

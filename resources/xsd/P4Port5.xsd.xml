@@ -1,0 +1,6 @@
+<SOAPFault xmlns:urn="edsn:edsn:data:soapfault:1:standard">
+  <ErrorCode>1000.00</ErrorCode>
+  <ErrorText>string</ErrorText>
+  <!--Optional:-->
+  <ErrorDetails>string</ErrorDetails>
+</SOAPFault>
